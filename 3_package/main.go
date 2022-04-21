@@ -1,14 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"package/calculation"
+)
 
 func main() {
 	fmt.Println("Hello, World!")
 
-
 	sentence := TestAja()
-
 	fmt.Println(sentence)
+
+	result := calculation.Add(10, 5)
+	fmt.Println(result)
 }
 
 /*
