@@ -42,7 +42,11 @@ func main() {
 
 	student := Student{1, "Komarudin", 3.5}
 	fmt.Println(student.Name)
+	
 	gradute(&student)
+	fmt.Println(student.Name)
+	
+	student.gradute2()
 	fmt.Println(student.Name)
 
 }
@@ -52,7 +56,12 @@ func change(old *int, new int)  {
 	*old = new
 }
 
-// penggunaan pointer struct sebagai parameter
+// penggunaan pointer struct sebagai parameter function
 func gradute(student *Student)  {
+	student.Name = student.Name + " S.Kom"
+}
+
+// penggunaan pointer struct sebagai parameter method
+func (student *Student) gradute2()  {
 	student.Name = student.Name + " S.Kom"
 }
